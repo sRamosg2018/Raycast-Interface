@@ -1,7 +1,7 @@
 # Raycast-Interface
 Simple interface made with Pygame to complement a Raycaster model.
 
-Before anything else: the raycaster itself was made using this tutorial: https://www.youtube.com/watch?v=gYRrGTC7GtA
+Before anything else: the raycaster itself was made following this tutorial: https://www.youtube.com/watch?v=gYRrGTC7GtA
 
 [![Link to the video](https://i3.ytimg.com/vi/gYRrGTC7GtA/maxresdefault.jpg)](https://www.youtube.com/watch?v=gYRrGTC7GtA)
 
