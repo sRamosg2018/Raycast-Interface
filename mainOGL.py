@@ -191,16 +191,20 @@ class Raygun:
 
 def drawMap():
     print(tiles_to_color)
+
+    # Pintar la casillas que estan siendo apuntados por los rayos
     for y in range(0, gridY):
         for x in range(0, gridX):
 
+            # Si choca entonces se colorea de amarillo
             if (x + gridX * y) in tiles_to_color:
                 glColor3f(1, 1, 0)
                 tiles_to_color.remove((x + gridX * y))
 
-
+            # En otro caso se mantiene de color blanco
             elif grid[(x + gridX * y)] == 1:
                 glColor3f(1, 1, 1)
+            # Si no es un muro se mantiene negro
             else:
                 glColor3f(0, 0, 0)
             xo = x * grid_length  # grid_length = 64
@@ -213,15 +217,6 @@ def drawMap():
             glVertex2i(xo + 1, yo + grid_length - 1)
             glVertex2i(xo + grid_length - 1, yo + grid_length - 1)
             glVertex2i(xo + grid_length - 1, yo + 1)
-
-            # Dibujar sin plantilla
-            """
-            glBegin(GL_QUADS)  # "Comienza a recibir vertices para formar un cuadrilatero"
-            glVertex2i(xo + 0, yo + 0)
-            glVertex2i(xo + 0, yo + grid_length - 0)
-            glVertex2i(xo + grid_length - 0, yo + grid_length - 0)
-            glVertex2i(xo + grid_length - 0, yo + 0)
-            """
             glEnd()  # Termina de recibir vertices
 
 
